@@ -1,4 +1,6 @@
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config({ silent: process.env.NODE_ENV === "production" });
 const app = express();
 
 const port = process.env.PORT || 3000;
