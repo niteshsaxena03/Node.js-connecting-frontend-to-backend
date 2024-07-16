@@ -41,6 +41,6 @@ app.get("/api/jokes", (req, res) => {
   res.send(jokes);
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server started on port 3000");
 });
