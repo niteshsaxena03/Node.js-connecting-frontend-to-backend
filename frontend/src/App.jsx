@@ -1,9 +1,21 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./App.css";
 
 function App() {
   const [jokes, setJokes] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/jokes")
+      .then((response) => {
+        setJokes(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div>
       <h1>Starting</h1>
