@@ -22,10 +22,12 @@ function App() {
       <p>JOKES:{jokes.length}</p>
 
       {jokes.map((joke, index) => {
-        <div key={joke.id}>
-          <h2>{joke.title}</h2>
-          <p>{joke.content}</p>
-        </div>;
+        return (
+          <div key={joke.id}>
+            <h2>{joke.title}</h2>
+            <p>{joke.content}</p>
+          </div>
+        );
       })}
     </div>
   );
